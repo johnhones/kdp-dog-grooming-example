@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Author Opportunity Audit — How to Start a Mobile Dog Grooming Business: How to Launch, Price and Grow a Profitable Dog Grooming Business from Scratch</title>
+<style>
+  :root {
+    --teal:     #00B5AD;
+    --teal-l:   #E0F7F6;
+    --teal-d:   #007A75;
+    --orange:   #F47421;
+    --orange-l: #FFF0E6;
+    --orange-d: #C05A10;
+    --navy:     #1B3A48;
+    --mid:      #4A6070;
+    --muted:    #7A909E;
+    --light:    #F5F7F8;
+    --border:   #DDE3E7;
+    --white:    #FFFFFF;
+    --black:    #111111;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #ECEEF0;
+    color: var(--black);
+    line-height: 1.6;
+    font-size: 13px;
+  }
+
+  /* HEADER */
+  .hdr { background: var(--navy); color: #fff; padding: 40px 56px 32px; border-bottom: 4px solid var(--teal); }
+  .hdr-meta { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: 10px; }
+  .hdr h1 { font-size: 28px; font-weight: 700; color: #fff; letter-spacing: -.3px; margin-bottom: 4px; }
+  .hdr h2 { font-size: 14px; color: rgba(255,255,255,.6); font-weight: 400; margin-bottom: 18px; }
+  .hdr-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .hdr-pill { display: inline-block; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); color: rgba(255,255,255,.75); padding: 4px 14px; border-radius: 3px; font-size: 11px; }
+  .hdr-pill.accent { background: var(--teal); border-color: var(--teal); color: #fff; font-weight: 600; }
+  .example-ribbon { background: var(--orange); color: #fff; text-align: center; padding: 10px; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
+
+  /* LAYOUT */
+  .wrap { max-width: 1260px; margin: 0 auto; padding: 40px 32px; }
+  .g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .mb { margin-bottom: 24px; }
+
+  /* SECTION LABEL */
+  .sec-label { font-size: 9px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--muted); margin: 40px 0 16px; display: flex; align-items: center; gap: 12px; }
+  .sec-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  /* CARDS */
+  .card { background: var(--white); border-radius: 6px; padding: 28px 32px; border: 1px solid var(--border); }
+  .card-hdr { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+  .card-title { font-size: 15px; font-weight: 700; color: var(--black); margin-bottom: 10px; line-height: 1.3; }
+
+  /* SCORE */
+  .score-panel { background: var(--navy); border-radius: 6px; padding: 32px; }
+  .score-eyebrow { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 12px; }
+  .score-num { font-size: 80px; font-weight: 900; color: var(--teal); line-height: 1; }
+  .score-denom { font-size: 28px; color: rgba(255,255,255,.3); font-weight: 300; }
+  .score-verdict { font-size: 18px; font-weight: 600; color: #fff; margin-top: 8px; }
+  .score-range { display: inline-block; margin-top: 10px; background: rgba(0,181,173,.12); border: 1px solid rgba(0,181,173,.3); color: var(--teal); padding: 4px 16px; border-radius: 3px; font-size: 11px; font-weight: 600; letter-spacing: 1px; }
+  .bar-row { margin-top: 28px; }
+  .bar-item { margin-bottom: 13px; }
+  .bar-item:last-child { margin-bottom: 0; }
+  .bar-meta { display: flex; justify-content: space-between; margin-bottom: 5px; }
+  .bar-lbl { font-size: 12px; color: rgba(255,255,255,.7); }
+  .bar-val { font-size: 12px; font-weight: 700; color: rgba(255,255,255,.9); }
+  .bar-track { height: 6px; background: rgba(255,255,255,.1); border-radius: 3px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 3px; }
+
+  /* STAT STRIP */
+  .stat-strip { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; margin-top: 20px; }
+  .stat-cell { background: var(--white); padding: 16px; text-align: center; }
+  .stat-v { font-size: 20px; font-weight: 800; color: var(--navy); }
+  .stat-l { font-size: 10px; color: var(--muted); margin-top: 3px; }
+
+  /* BADGES */
+  .badge { display: inline-block; padding: 3px 9px; border-radius: 3px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .4px; }
+  .b-teal   { background: var(--teal-l);   color: var(--teal-d); }
+  .b-orange { background: var(--orange-l); color: var(--orange-d); }
+  .b-navy   { background: rgba(27,58,72,.08); color: var(--navy); }
+  .b-muted  { background: var(--light);    color: var(--muted); }
+
+  /* ITEMS */
+  .item { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 20px; }
+  .item:last-child { margin-bottom: 0; }
+  .item-icon { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; flex-shrink: 0; margin-top: 1px; }
+  .icon-teal   { background: var(--teal-l);   color: var(--teal-d); }
+  .icon-orange { background: var(--orange-l); color: var(--orange-d); }
+  .icon-navy   { background: rgba(27,58,72,.08); color: var(--navy); }
+  .item-t { font-size: 13px; font-weight: 700; color: var(--black); margin-bottom: 3px; }
+  .item-b { font-size: 12px; color: var(--mid); line-height: 1.6; }
+
+  /* CALLOUTS */
+  .callout { border-left: 3px solid var(--teal); background: var(--teal-l); padding: 14px 18px; border-radius: 0 4px 4px 0; font-size: 12px; color: var(--navy); line-height: 1.65; }
+  .callout-orange { border-left-color: var(--orange); background: var(--orange-l); }
+  .callout strong { color: var(--black); }
+
+  /* TABLES */
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th { background: var(--navy); color: rgba(255,255,255,.85); padding: 9px 12px; text-align: left; font-weight: 600; font-size: 10px; letter-spacing: .5px; text-transform: uppercase; }
+  td { padding: 9px 12px; border-bottom: 1px solid var(--border); color: var(--mid); }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: var(--light); }
+  .tc { text-align: center; } .tr { text-align: right; }
+
+  /* KW PILLS */
+  .kw { display: inline-block; background: var(--teal-l); color: var(--teal-d); border: 1px solid rgba(0,181,173,.2); border-radius: 3px; padding: 3px 10px; font-size: 11px; font-weight: 600; margin: 3px; }
+  .kw span { color: var(--teal-d); font-weight: 700; }
+
+  /* STEPS */
+  .step { display: flex; gap: 16px; align-items: flex-start; padding: 18px 20px; border-radius: 4px; margin-bottom: 10px; }
+  .step:last-child { margin-bottom: 0; }
+  .step-teal   { background: var(--teal-l);   border-left: 4px solid var(--teal); }
+  .step-orange { background: var(--orange-l); border-left: 4px solid var(--orange); }
+  .step-num { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 12px; flex-shrink: 0; color: #fff; }
+  .num-teal   { background: var(--teal); }
+  .num-orange { background: var(--orange); }
+  .step-t { font-size: 13px; font-weight: 700; color: var(--black); margin-bottom: 4px; }
+  .step-b { font-size: 12px; color: var(--mid); line-height: 1.55; }
+
+  /* BANNER */
+  .banner { background: var(--navy); color: #fff; border-radius: 6px; padding: 24px 32px; margin-bottom: 24px; }
+  .banner h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; color: #fff; }
+  .banner p  { font-size: 12px; color: rgba(255,255,255,.7); line-height: 1.65; }
+  .banner-stat { display: inline-block; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.15); color: #fff; padding: 6px 14px; border-radius: 3px; font-size: 12px; font-weight: 600; margin: 8px 6px 0 0; }
+
+  /* FEATURE CARD */
+  .feature-card { background: var(--white); border: 1px solid var(--border); border-top: 4px solid var(--teal); border-radius: 6px; padding: 28px 32px; margin-bottom: 24px; }
+  .feature-card.orange-top { border-top-color: var(--orange); }
+  .feature-eyebrow { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-d); margin-bottom: 8px; }
+  .feature-eyebrow.orange { color: var(--orange-d); }
+
+  /* OBSERVATION */
+  .obs-card { background: var(--white); border-radius: 6px; padding: 28px 32px; border: 1px solid var(--border); border-left: 4px solid var(--teal); }
+
+  /* ACTION BANNER */
+  .action-banner { background: var(--teal); color: #fff; border-radius: 6px; padding: 24px 32px; margin-top: 32px; display: flex; gap: 20px; align-items: flex-start; }
+  .ab-icon  { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+  .ab-title { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 5px; }
+  .ab-body  { font-size: 12px; color: rgba(255,255,255,.9); line-height: 1.65; }
+
+  /* FOOTER */
+  .ftr { background: var(--navy); color: rgba(255,255,255,.35); text-align: center; padding: 22px; font-size: 11px; }
+
+  @media(max-width:900px){
+    .g2{ grid-template-columns:1fr; }
+    .hdr{ padding:24px 20px; }
+    .wrap{ padding:24px 16px; }
+    .score-num{ font-size:56px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- EXAMPLE RIBBON -->
+<div class="example-ribbon">&#9733; Example Audit &mdash; For Illustration Purposes Only &#9733;</div>
+
+<div class="hdr">
+  <div class="hdr-meta">Author Opportunity Audit &nbsp;&middot;&nbsp; June 2026 &nbsp;&middot;&nbsp; Confidential</div>
+  <h1>How to Start a Mobile Dog Grooming Business:</h1>
+  <h2>How to Launch, Price and Grow a Profitable Dog Grooming Business from Scratch</h2>
+  <div class="hdr-pills">
+    <span class="hdr-pill">Author: Rachel Doyle</span>
+    <span class="hdr-pill">Format: Kindle + Paperback</span>
+    <span class="hdr-pill">Niche: Pet Business &amp; Dog Grooming</span>
+    <span class="hdr-pill accent">Score: 82 / 100 &mdash; High Opportunity</span>
+  </div>
+</div>
+
+<div class="wrap">
+
+<!-- SCORE + SUMMARY -->
+<div class="g2 mb">
+  <div class="score-panel">
+    <div class="score-eyebrow">Author Opportunity Score</div>
+    <div><span class="score-num">82</span><span class="score-denom">&thinsp;/ 100</span></div>
+    <div class="score-verdict">High Opportunity</div>
+    <div class="score-range">75 &ndash; 89 Range</div>
+    <div class="bar-row">
+      <div class="bar-item">
+        <div class="bar-meta"><span class="bar-lbl">Demand</span><span class="bar-val">17 / 20</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:85%;background:var(--teal);"></div></div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-meta"><span class="bar-lbl">Competition</span><span class="bar-val">15 / 20</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:75%;background:var(--teal);"></div></div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-meta"><span class="bar-lbl">Positioning</span><span class="bar-val">16 / 20</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:80%;background:var(--teal);"></div></div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-meta"><span class="bar-lbl">Discoverability</span><span class="bar-val">14 / 20</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:70%;background:var(--orange);"></div></div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-meta"><span class="bar-lbl">Expansion Potential</span><span class="bar-val">20 / 20</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--teal);"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:20px;">
+    <div class="card">
+      <div class="card-hdr">Book Summary</div>
+      <p style="font-size:13px;color:var(--mid);line-height:1.7;"><em>How to Start a Mobile Dog Grooming Business</em> is a practical start-up guide for aspiring pet business owners, written by a groomer with 10 years of salon experience. It covers pricing, client acquisition, equipment, and operations &mdash; everything needed to go from first pair of scissors to a fully booked, profitable grooming business.</p>
+      <div class="stat-strip">
+        <div class="stat-cell"><div class="stat-v">10</div><div class="stat-l">Years Experience</div></div>
+        <div class="stat-cell"><div class="stat-v">£130B</div><div class="stat-l">Global Pet Industry</div></div>
+        <div class="stat-cell"><div class="stat-v">3+</div><div class="stat-l">Revenue Streams</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-hdr">Professional Assessment</div>
+      <p style="font-size:13px;color:var(--mid);line-height:1.7;margin-bottom:14px;">This book sits in one of the most commercially attractive niches in self-publishing: a fast-growing industry, a passionate and growing buyer base, and very few credible competing titles. The author&rsquo;s real-world experience gives it an authority edge that no AI-generated or generic business guide can replicate. The opportunity is genuinely strong.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;">
+        <span class="badge b-teal">Fast-Growing Industry</span>
+        <span class="badge b-teal">Low Direct Competition</span>
+        <span class="badge b-teal">Passionate Buyer Base</span>
+        <span class="badge b-teal">Practitioner Authority</span>
+        <span class="badge b-orange">Reviews Needed</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- KEY FINDING BANNER -->
+<div class="banner mb">
+  <h3>Key Finding &mdash; A £30 Billion UK Industry with Almost No Books to Match</h3>
+  <p>The UK pet care market is growing year-on-year, with dog grooming one of its fastest-expanding sectors. Yet Amazon has fewer than 15 credible business guides in this space &mdash; and none written by a working groomer with a decade of hands-on experience. <strong style="color:#fff;">This is a clear and significant gap in the market.</strong></p>
+  <div>
+    <span class="banner-stat">&lt;15 Competing Titles</span>
+    <span class="banner-stat">&#163;800 &ndash; &#163;3,200/mo Top Earners</span>
+    <span class="banner-stat">Evergreen Growing Niche</span>
+    <span class="banner-stat">Log Book Opportunity</span>
+  </div>
+</div>
+
+<!-- COMPETITOR TABLE -->
+<div class="sec-label">Market Landscape &mdash; Competitor Revenue</div>
+<div class="card mb">
+  <div class="g2" style="gap:32px;align-items:start;">
+    <div>
+      <div class="card-title">What the Top Books in Adjacent Pet Niches Are Earning</div>
+      <div class="callout" style="margin-bottom:16px;">
+        <strong>The gap is real.</strong> Top pet care and pet business books on Amazon are generating between &#163;800 and &#163;3,200 per month. The dog grooming business niche has barely any direct competition &mdash; meaning a well-positioned, credible book could enter the top 3 with relatively modest review numbers.
+      </div>
+      <div class="item">
+        <div class="item-icon icon-teal">&#10003;</div>
+        <div>
+          <div class="item-t">Pet business books are a proven commercial category</div>
+          <div class="item-b">Adjacent titles (dog training, pet photography, pet sitting) consistently show strong BSRs and sustained monthly revenue. Buyers in the pet space spend freely on education and expertise.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon icon-teal">&#10003;</div>
+        <div>
+          <div class="item-t">The grooming business sub-niche is almost uncontested</div>
+          <div class="item-b">Unlike dog training &mdash; which has dozens of titles &mdash; the dog grooming <em>business</em> guide space has fewer than 15 listings. A book with 20&ndash;30 genuine reviews would almost certainly rank on the first page.</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:12px;">Competitor Revenue &mdash; Pet Business Category</p>
+      <table style="margin-bottom:12px;">
+        <thead><tr><th>Book</th><th class="tc">BSR</th><th class="tr">Rev / Mo</th><th class="tc">Reviews</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Top Pet Business Guide</strong> <span class="badge b-teal" style="font-size:9px;">Top</span></td><td class="tc">1,240</td><td class="tr" style="color:var(--teal-d);font-weight:700;">&#163;3,200</td><td class="tc">418</td></tr>
+          <tr><td>Dog Training Business Handbook</td><td class="tc">8,530</td><td class="tr">&#163;1,140</td><td class="tc">203</td></tr>
+          <tr><td>Pet Sitting &amp; Dog Walking Guide</td><td class="tc">12,700</td><td class="tr">&#163;880</td><td class="tc">156</td></tr>
+          <tr><td>Start a Pet Care Business</td><td class="tc">19,440</td><td class="tr">&#163;540</td><td class="tc">89</td></tr>
+          <tr><td>Dog Grooming at Home</td><td class="tc">31,200</td><td class="tr">&#163;280</td><td class="tc">44</td></tr>
+          <tr><td style="font-weight:700;">How to Start a Mobile Dog Grooming Business</td><td class="tc"><span class="badge b-orange">New</span></td><td class="tr" style="color:var(--orange-d);">Untapped</td><td class="tc">&mdash;</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:10px;color:var(--muted);font-style:italic;">Revenue estimates based on BSR-to-sales modelling. Individual results will vary.</p>
+    </div>
+  </div>
+</div>
+
+<!-- LOG BOOK OPPORTUNITY -->
+<div class="sec-label">Expansion Opportunity &mdash; Dog Grooming Log Book</div>
+<div class="feature-card orange-top mb">
+  <div class="feature-eyebrow orange">Highest Expansion Potential &mdash; Separate Revenue Stream</div>
+  <div class="g2" style="gap:32px;align-items:start;">
+    <div>
+      <div class="card-title">The Log Book Space &mdash; Fast to Publish, Consistent Monthly Income</div>
+      <div class="callout callout-orange" style="margin-bottom:18px;">
+        <strong>Dog grooming appointment books and client log books are actively searched on Amazon</strong> &mdash; and most of what&rsquo;s currently available is generic, low-quality, and written by people who have never set foot in a grooming salon. An author with 10 years of experience knows exactly what a groomer needs to track. That knowledge advantage is the product.
+      </div>
+      <div class="item">
+        <div class="item-icon icon-orange">&#10003;</div>
+        <div>
+          <div class="item-t">Low-content, high-margin, quick to produce</div>
+          <div class="item-b">A dog grooming client record book &mdash; breed notes, coat type, service history, pricing, appointment slots &mdash; can be designed and live on Amazon within days. It requires no writing, just smart formatting from someone who understands the workflow.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon icon-orange">&#10003;</div>
+        <div>
+          <div class="item-t">Publish multiple variants to multiply listings</div>
+          <div class="item-b">Dog grooming client log &middot; Grooming appointment planner &middot; Pet salon job tracker. Each targets a slightly different keyword and appears as a separate listing. A catalogue of three log books could generate £500&ndash;£1,500/mo combined with minimal ongoing effort.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon icon-orange">&#10003;</div>
+        <div>
+          <div class="item-t">The main book and log books sell to the same buyer</div>
+          <div class="item-b">Someone who buys the Blueprint to start their business will also want a client log book to run it. Amazon&rsquo;s &ldquo;customers also bought&rdquo; algorithm will surface both titles together, compounding visibility across the catalogue.</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:12px;">Suggested Log Book Titles</p>
+      <div class="item" style="margin-bottom:14px;">
+        <div class="item-icon icon-orange">1</div>
+        <div>
+          <div class="item-t">Dog Grooming Client Record Book</div>
+          <div class="item-b">Breed, coat type, service history, pricing, owner notes. Targets &ldquo;dog grooming client record book&rdquo; and &ldquo;dog grooming log book.&rdquo;</div>
+        </div>
+      </div>
+      <div class="item" style="margin-bottom:14px;">
+        <div class="item-icon icon-orange">2</div>
+        <div>
+          <div class="item-t">Dog Grooming Appointment Planner</div>
+          <div class="item-b">Weekly scheduler with client slots, service notes, and payment tracking. Targets appointment and scheduler search terms.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon icon-orange">3</div>
+        <div>
+          <div class="item-t">Pet Grooming Business Income Tracker</div>
+          <div class="item-b">Monthly revenue, expenses, and profit summary. Targets the &ldquo;small business income tracker&rdquo; keyword within the pet niche.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STRENGTHS + GROWTH -->
+<div class="sec-label">Strengths &amp; Growth Opportunities</div>
+<div class="g2 mb">
+  <div class="card">
+    <div class="card-hdr">What Is Working Well</div>
+    <div class="item">
+      <div class="item-icon icon-teal">&#10003;</div>
+      <div>
+        <div class="item-t">Practitioner authority in an underserved category</div>
+        <div class="item-b">10 years of hands-on grooming experience is an asset no competitor without that background can fake. Buyers who are serious about starting a business will choose the author who has actually done it.</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-icon icon-teal">&#10003;</div>
+      <div>
+        <div class="item-t">The pet industry is growing and recession-resilient</div>
+        <div class="item-b">UK pet ownership has increased significantly post-pandemic. Dog grooming in particular has grown as an aspirational and recurring service. Books in this space have long shelf lives because the demand is structural, not seasonal.</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-icon icon-teal">&#10003;</div>
+      <div>
+        <div class="item-t">Available as Kindle and paperback from launch</div>
+        <div class="item-b">Having both formats live from day one means the book appears correctly on a single Amazon listing with format options &mdash; maximising conversions and capturing buyers who prefer either format.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-hdr">Growth Opportunities</div>
+    <div class="item">
+      <div class="item-icon icon-orange">&rarr;</div>
+      <div>
+        <div class="item-t">Build reviews quickly to claim the first-page position</div>
+        <div class="item-b">With fewer than 15 competing titles, the first page of Amazon search results is wide open. Even 15&ndash;25 genuine reviews would make this one of the most credible books in the category and push it to the top of organic results.</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-icon icon-orange">&rarr;</div>
+      <div>
+        <div class="item-t">Optimise listing categories to reduce competition further</div>
+        <div class="item-b">Selecting niche subcategories (Pet Business &gt; Grooming) rather than broad ones means ranking against 12 books rather than 1,200. Category strategy alone can move a book to number one with modest sales.</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-icon icon-teal">&uarr;</div>
+      <div>
+        <div class="item-t">Launch a log book to create a two-title catalogue immediately</div>
+        <div class="item-b">A dog grooming client record book can be live within a week of the main book launch. From day one, buyers land on a page that shows two related titles &mdash; the business guide and the operational tool to run the business.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADS + KEYWORDS -->
+<div class="sec-label">Keyword &amp; Advertising Strategy</div>
+<div class="g2 mb">
+  <div class="card">
+    <div class="card-hdr">Amazon Advertising Opportunity</div>
+    <div class="callout" style="margin-bottom:18px;">
+      <strong>Low competition = low cost-per-click.</strong> With fewer than 15 competing titles bidding on these keywords, even a modest Amazon Ads budget delivers strong reach. A new book in this category can move to page one faster &mdash; and more cheaply &mdash; than in almost any mainstream niche.
+    </div>
+    <div class="item">
+      <div class="item-icon icon-orange">1</div>
+      <div>
+        <div class="item-t">Auto campaign first &mdash; let Amazon find the buyers</div>
+        <div class="item-b">Start with a Sponsored Products Auto campaign at £5&ndash;10/day for the first 4 weeks. Let Amazon identify which search terms actually convert in this niche before spending on manual bids.</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-icon icon-orange">2</div>
+      <div>
+        <div class="item-t">Manual campaign on the core keywords after 4 weeks</div>
+        <div class="item-b">Bid specifically on &ldquo;dog grooming business book,&rdquo; &ldquo;how to start a dog grooming business,&rdquo; and &ldquo;pet grooming guide&rdquo; with exact match bids. Target 30&ndash;40% ACOS in this low-competition environment.</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-icon icon-orange">3</div>
+      <div>
+        <div class="item-t">Separate log book campaign once published</div>
+        <div class="item-b">Target &ldquo;dog grooming client record book,&rdquo; &ldquo;grooming appointment book,&rdquo; and &ldquo;pet salon log book&rdquo; in a dedicated low-budget campaign. Low CPC in this sub-niche makes even £3/day effective.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-hdr">Keyword Strategy &mdash; Priority Targets</div>
+    <p style="font-size:12px;color:var(--mid);margin-bottom:14px;">Target these across all 7 Amazon backend keyword fields and in the book description.</p>
+    <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:8px;">Primary Keywords &mdash; Main Book</p>
+    <div style="margin-bottom:14px;">
+      <span class="kw">dog grooming business book</span>
+      <span class="kw">how to start a dog grooming business</span>
+      <span class="kw">pet grooming business guide</span>
+      <span class="kw">dog grooming for beginners</span>
+    </div>
+    <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:8px;">Primary Keywords &mdash; Log Books</p>
+    <div style="margin-bottom:14px;">
+      <span class="kw">dog grooming client record book</span>
+      <span class="kw">dog grooming appointment planner</span>
+      <span class="kw">pet salon client log</span>
+      <span class="kw">grooming business tracker</span>
+    </div>
+    <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:8px;">Supporting Keywords</p>
+    <div style="margin-bottom:14px;">
+      <span class="kw">mobile dog grooming setup</span>
+      <span class="kw">dog grooming pricing guide</span>
+      <span class="kw">pet business startup book</span>
+    </div>
+
+    <div style="margin-top:18px;padding-top:16px;border-top:1px solid var(--border);">
+      <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:10px;">Opportunity Signals</p>
+      <table>
+        <thead><tr><th>Signal</th><th class="tc">Status</th></tr></thead>
+        <tbody>
+          <tr><td>Author has real industry credentials</td><td class="tc"><span class="badge b-teal">10 Years</span></td></tr>
+          <tr><td>Fast-growing, evergreen niche</td><td class="tc"><span class="badge b-teal">Yes</span></td></tr>
+          <tr><td>Fewer than 15 direct competitors</td><td class="tc"><span class="badge b-teal">Yes</span></td></tr>
+          <tr><td>Kindle + Paperback available</td><td class="tc"><span class="badge b-teal">Yes</span></td></tr>
+          <tr><td>Log book opportunity identified</td><td class="tc"><span class="badge b-teal">Yes</span></td></tr>
+          <tr><td>Listing fully keyword-optimised</td><td class="tc"><span class="badge b-orange">Needs Review</span></td></tr>
+          <tr><td>Reviews established (15+)</td><td class="tc"><span class="badge b-orange">In Progress</span></td></tr>
+          <tr><td>Log book published</td><td class="tc"><span class="badge b-orange">Not Yet</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- NEXT STEPS -->
+<div class="sec-label">Recommended Next Steps</div>
+<div class="card mb">
+  <div class="card-hdr">Ranked by Priority</div>
+  <div class="step step-teal">
+    <div class="step-num num-teal">1</div>
+    <div>
+      <div class="step-t">Optimise the Amazon listing end-to-end</div>
+      <div class="step-b">Load all seven backend keyword fields, rewrite the description to lead with the author&rsquo;s 10-year credibility, and select the most targeted subcategories available. A well-optimised listing in this low-competition niche can reach page one organically within weeks of launch.</div>
+    </div>
+  </div>
+  <div class="step step-teal">
+    <div class="step-num num-teal">2</div>
+    <div>
+      <div class="step-t">Publish a Dog Grooming Client Record Book</div>
+      <div class="step-b">The log book space is active, the keyword is profitable, and the author is uniquely qualified to design one. A grooming client record book built from 10 years of professional experience would outclass every generic competitor currently in the market. This is the fastest additional revenue available.</div>
+    </div>
+  </div>
+  <div class="step step-orange">
+    <div class="step-num num-orange">3</div>
+    <div>
+      <div class="step-t">Build an early review base</div>
+      <div class="step-b">Reach out to 15&ndash;20 dog groomers, pet business owners, or students in grooming courses for advance review copies. Even 10 verified reviews would make this book stand out immediately in a category where most listings have fewer than 50.</div>
+    </div>
+  </div>
+  <div class="step step-orange">
+    <div class="step-num num-orange">4</div>
+    <div>
+      <div class="step-t">Launch a targeted Amazon Ads campaign</div>
+      <div class="step-b">Start a Sponsored Products Auto campaign at £5&ndash;10/day. After 4 weeks, switch to manual campaigns targeting the core grooming business keywords. Low competition means low CPC and a strong return on a modest budget.</div>
+    </div>
+  </div>
+  <div class="step step-orange">
+    <div class="step-num num-orange">5</div>
+    <div>
+      <div class="step-t">Build a small catalogue in the pet business space</div>
+      <div class="step-b">The Blueprint + a client log book + a dog grooming appointment planner is a natural three-title catalogue. Each title reinforces the others on Amazon, and together they dominate a niche that currently has almost no credible competition from a real practitioner.</div>
+    </div>
+  </div>
+</div>
+
+<!-- AUDITOR OBSERVATION -->
+<div class="sec-label">Auditor&rsquo;s Observation</div>
+<div class="obs-card mb">
+  <p style="font-size:13px;color:var(--mid);line-height:1.85;">The opportunity here is as clear as I see in this work. A fast-growing industry, a practitioner author with a decade of real experience, and a direct competitor landscape that barely exists &mdash; this is exactly the combination that produces genuine, sustained Amazon income. The most immediate move is also the most impactful: optimise the listing so the book gets found, then add a client log book within the first 30 days. That two-title combination, marketed to the same buyer, in a niche with fewer than 15 credible competitors, is a strong commercial foundation. The reviews will come with time. The opportunity is available right now.</p>
+</div>
+
+<!-- ACTION BANNER -->
+<div class="action-banner">
+  <div class="ab-icon">&#128021;</div>
+  <div>
+    <div class="ab-title">Top Priority &mdash; Publish a Dog Grooming Client Record Book</div>
+    <div class="ab-body">The log book space is active, the keyword is profitable, and no one with real grooming experience has published one. A well-designed client record book from a working professional could be live within days and generating income within weeks &mdash; as a standalone title and as a natural companion to the Blueprint.</div>
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+<div class="ftr">
+  Author Opportunity Audit &nbsp;&middot;&nbsp; Example Only &mdash; For Illustration Purposes &nbsp;&middot;&nbsp; June 2026
+</div>
+
+</body>
+</html>
