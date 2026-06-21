@@ -137,10 +137,17 @@
   .ftr { background: var(--navy); color: rgba(255,255,255,.35); text-align: center; padding: 22px; font-size: 11px; }
 
   .tip { position: relative; display: inline-flex; align-items: center; gap: 5px; }
-  .tip-q { width: 14px; height: 14px; border-radius: 50%; background: rgba(255,255,255,.15); color: rgba(255,255,255,.55); font-size: 8px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center; cursor: default; flex-shrink: 0; }
-  .tip-box { display: none; position: absolute; left: 0; bottom: calc(100% + 8px); background: #fff; color: #1B3A48; font-size: 11px; line-height: 1.55; padding: 9px 12px; border-radius: 4px; width: 210px; box-shadow: 0 4px 20px rgba(0,0,0,.25); z-index: 100; pointer-events: none; }
-  .tip-box::after { content: ''; position: absolute; top: 100%; left: 8px; border: 5px solid transparent; border-top-color: #fff; }
+  .tip-q { width: 14px; height: 14px; border-radius: 50%; border: 1px solid rgba(255,255,255,.3); color: rgba(255,255,255,.4); font-size: 9px; font-style: italic; font-weight: 400; display: inline-flex; align-items: center; justify-content: center; cursor: default; flex-shrink: 0; }
+  .tip-box { display: none; position: absolute; left: 0; top: calc(100% + 8px); background: #1a3550; border: 1px solid rgba(0,181,173,.3); color: rgba(255,255,255,.75); font-size: 11px; line-height: 1.55; padding: 10px 12px; border-radius: 6px; width: 240px; box-shadow: 0 4px 20px rgba(0,0,0,.4); z-index: 100; pointer-events: none; }
+  .tip-box::before { content: ''; position: absolute; top: -5px; left: 14px; width: 8px; height: 8px; background: #1a3550; border-left: 1px solid rgba(0,181,173,.3); border-top: 1px solid rgba(0,181,173,.3); transform: rotate(45deg); }
   .tip:hover .tip-box { display: block; }
+  .tt-title { font-size: 11px; font-weight: 700; color: #00B5AD; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 5px; }
+  .tt-scale { margin-top: 6px; padding-top: 6px; border-top: 1px solid rgba(255,255,255,.08); }
+  .tt-row { display: flex; justify-content: space-between; gap: 8px; font-size: 10px; color: rgba(255,255,255,.45); margin-bottom: 2px; }
+  .tt-row span:last-child { color: rgba(255,255,255,.7); font-weight: 500; text-align: right; }
+  .tt-flywheel { margin-top: 6px; padding-top: 6px; border-top: 1px solid rgba(255,255,255,.08); font-size: 10px; color: rgba(244,116,33,.9); line-height: 1.5; }
+  .tt-fly-label { font-size: 9px; text-transform: uppercase; letter-spacing: .5px; color: rgba(255,255,255,.3); margin-bottom: 2px; }
+  .bar-display-tag { font-size: 10px; color: rgba(255,255,255,.3); font-style: italic; }
 
   /* HARDBACK CARD */
   .hb-card { background: var(--white); border: 1px solid var(--border); border-top: 4px solid var(--teal); border-radius: 6px; padding: 28px 32px; margin-bottom: 24px; }
@@ -247,38 +254,166 @@
       <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
         <div>
           <div class="score-eyebrow">Discoverability Score</div>
-          <div><span class="score-num" style="color:#00B5AD;">82</span><span class="score-denom">&thinsp;/ 100</span></div>
-          <div class="score-range" style="font-weight:400;background:rgba(244,116,33,.18);border:1px solid rgba(244,116,33,.4);">High Opportunity</div>
+          <div><span class="score-num" style="color:#00B5AD;">45</span><span class="score-denom">&thinsp;/ 100</span></div>
+          <div class="score-range" style="font-weight:400;background:rgba(0,181,173,.12);border:1px solid rgba(0,181,173,.3);">Early Stage</div>
         </div>
         <img src="dogg.jpg" alt="How to Start a Dog Grooming Business by Travis R Carter" style="width:158px;border-radius:4px;display:block;flex-shrink:0;position:relative;right:84px;filter:brightness(1.5) saturate(1.1);box-shadow:0 8px 32px rgba(0,0,0,.5);">
       </div>
     </div>
     <div style="background:var(--navy);padding:28px 32px 32px;">
     <div class="bar-row">
+
+      <!-- 1. Keywords & Metadata /25 -->
       <div class="bar-item">
-        <div class="bar-meta"><span class="bar-lbl tip">Demand <span class="tip-q">?</span><span class="tip-box">How much buyer demand exists for this niche on Amazon, based on the number of books actively selling and estimated monthly revenue.</span></span><span class="bar-val">17 / 20</span></div>
-        <div class="bar-track"><div class="bar-fill" style="width:85%;background:var(--teal);"></div></div>
+        <div class="bar-meta">
+          <span class="bar-lbl tip">Keywords &amp; Metadata <span class="tip-q">i</span>
+            <span class="tip-box">
+              <div class="tt-title">Keywords &amp; Metadata · 18/25</div>
+              Title and subtitle contain the primary keyword "dog grooming business." Backend keywords are unconfirmed — optimizing these is a quick win.
+              <div class="tt-scale">
+                <div class="tt-row"><span>25/25</span><span>Title, subtitle, backend and description all optimized</span></div>
+                <div class="tt-row"><span>15–24</span><span>Title strong, backend or subtitle weak</span></div>
+                <div class="tt-row"><span>5–14</span><span>Generic title, some keywords present</span></div>
+                <div class="tt-row"><span>0–4</span><span>No keyword strategy visible</span></div>
+              </div>
+            </span>
+          </span>
+          <span class="bar-val">18 / 25</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" style="width:72%;background:var(--teal);"></div></div>
       </div>
+
+      <!-- 2. BSR vs Niche Average /20 -->
       <div class="bar-item">
-        <div class="bar-meta"><span class="bar-lbl tip">Competition <span class="tip-q">?</span><span class="tip-box">How competitive this niche is for paid books. Lower scores mean less competition and more room to rank with ads.</span></span><span class="bar-val">15 / 20</span></div>
-        <div class="bar-track"><div class="bar-fill" style="width:75%;background:var(--orange);"></div></div>
+        <div class="bar-meta">
+          <span class="bar-lbl tip">BSR vs Niche Average <span class="tip-q">i</span>
+            <span class="tip-box">
+              <div class="tt-title">BSR vs Niche Average · 11/20</div>
+              Your BSR of 1,407,257 is approximately 10% better than the niche average of 1,565,500. A lower BSR means Amazon is showing your book to more buyers.
+              <div class="tt-scale">
+                <div class="tt-row"><span>20/20</span><span>BSR 50%+ better than niche average</span></div>
+                <div class="tt-row"><span>15/20</span><span>BSR 20–49% better</span></div>
+                <div class="tt-row"><span>10/20</span><span>Equal to niche average</span></div>
+                <div class="tt-row"><span>5/20</span><span>BSR 20–49% worse</span></div>
+                <div class="tt-row"><span>0/20</span><span>BSR 50%+ worse or no rank yet</span></div>
+              </div>
+            </span>
+          </span>
+          <span class="bar-val">11 / 20</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" style="width:55%;background:var(--teal);"></div></div>
       </div>
+
+      <!-- 3. Competition — display only -->
       <div class="bar-item">
-        <div class="bar-meta"><span class="bar-lbl tip">Reviews <span class="tip-q">?</span><span class="tip-box">Written reviews on your Amazon listing. You have 0 written reviews. Target is 15 before running ads.</span></span><span class="bar-val">0</span></div>
+        <div class="bar-meta">
+          <span class="bar-lbl tip">Competition <span class="tip-q">i</span>
+            <span class="tip-box">
+              <div class="tt-title">Competition</div>
+              Shows how many paid competitors are running ads in this niche. This is a niche characteristic — you cannot change it, but it shapes your strategy. High competition means reviews and ads matter even more.
+            </span>
+          </span>
+          <span class="bar-val"><span class="bar-display-tag">20 competitors</span></span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" style="width:60%;background:var(--orange);"></div></div>
+      </div>
+
+      <!-- 4. Reviews /20 — scored -->
+      <div class="bar-item">
+        <div class="bar-meta">
+          <span class="bar-lbl tip">Reviews <span class="tip-q">i</span>
+            <span class="tip-box">
+              <div class="tt-title">Reviews · 0/20</div>
+              0 written reviews. Written reviews are Amazon's primary trust signal and your biggest single lever for improving this score.
+              <div class="tt-flywheel">
+                <div class="tt-fly-label">Indirect impact</div>
+                More reviews improve organic ranking, which drives more sales, which generates more reviews.
+              </div>
+              <div class="tt-scale">
+                <div class="tt-row"><span>20/20</span><span>30+ reviews</span></div>
+                <div class="tt-row"><span>15/20</span><span>15–29 reviews</span></div>
+                <div class="tt-row"><span>10/20</span><span>8–14 reviews</span></div>
+                <div class="tt-row"><span>5/20</span><span>3–7 reviews</span></div>
+                <div class="tt-row"><span>0/20</span><span>No reviews yet</span></div>
+              </div>
+            </span>
+          </span>
+          <span class="bar-val">0 / 20</span>
+        </div>
         <div class="bar-track"><div class="bar-fill" style="width:0%;background:var(--orange);"></div></div>
       </div>
+
+      <!-- 5. Ratings — display only -->
       <div class="bar-item">
-        <div class="bar-meta"><span class="bar-lbl tip">Ratings <span class="tip-q">?</span><span class="tip-box">Total Amazon count of ratings and written reviews combined, as displayed on your listing. This is the number shoppers see on the search results page.</span></span><span class="bar-val">0</span></div>
-        <div class="bar-track"><div class="bar-fill" style="width:0%;background:var(--orange);"></div></div>
+        <div class="bar-meta">
+          <span class="bar-lbl tip">Ratings <span class="tip-q">i</span>
+            <span class="tip-box">
+              <div class="tt-title">Ratings</div>
+              Amazon's combined total of written reviews plus star ratings — the number shoppers see on the search page. Shown for context. Written reviews (above) are what drive your score.
+            </span>
+          </span>
+          <span class="bar-val"><span class="bar-display-tag">0 total</span></span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" style="width:0%;background:rgba(255,255,255,.2);"></div></div>
       </div>
+
+      <!-- 6. Category Placement /15 -->
       <div class="bar-item">
-        <div class="bar-meta"><span class="bar-lbl tip">Growth Potential <span class="tip-q">?</span><span class="tip-box">How positioned your book is to grow, factoring in current reviews, ad activity, and organic ranking position.</span></span><span class="bar-val">20 / 20</span></div>
-        <div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--teal);"></div></div>
+        <div class="bar-meta">
+          <span class="bar-lbl tip">Category Placement <span class="tip-q">i</span>
+            <span class="tip-box">
+              <div class="tt-title">Category Placement · 8/15</div>
+              Your book sits in Amazon browse categories that shoppers filter by topic. Being in the right categories gives free organic visibility and makes a Best Seller badge achievable. KDP allows you to request additional categories beyond the default two.
+              <div class="tt-scale">
+                <div class="tt-row"><span>15/15</span><span>Right categories + achievable top-10 rank</span></div>
+                <div class="tt-row"><span>10/15</span><span>Right categories, top-10 difficult</span></div>
+                <div class="tt-row"><span>5–8/15</span><span>Likely right area, categories unconfirmed</span></div>
+                <div class="tt-row"><span>0/15</span><span>Wrong or unknown categories</span></div>
+              </div>
+            </span>
+          </span>
+          <span class="bar-val">8 / 15</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" style="width:53%;background:var(--teal);"></div></div>
       </div>
+
+      <!-- 7. Amazon Ads /10 -->
       <div class="bar-item">
-        <div class="bar-meta"><span class="bar-lbl tip">Amazon Ads <span class="tip-q">?</span><span class="tip-box">Running Amazon Ads is the highest-leverage action once you have 15 reviews.</span></span><span class="bar-val">Active</span></div>
-        <div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--teal);"></div></div>
+        <div class="bar-meta">
+          <span class="bar-lbl tip">Amazon Ads <span class="tip-q">i</span>
+            <span class="tip-box">
+              <div class="tt-title">Amazon Ads · 0/10</div>
+              No ads running. Ads amplify visibility fast — but build to 15 reviews first. Ads without social proof waste budget.
+              <div class="tt-scale">
+                <div class="tt-row"><span>10/10</span><span>Ads confirmed active</span></div>
+                <div class="tt-row"><span>0/10</span><span>No ads running</span></div>
+              </div>
+            </span>
+          </span>
+          <span class="bar-val">Not Active</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" style="width:0%;background:rgba(255,255,255,.2);"></div></div>
       </div>
+
+      <!-- 8. Price vs Niche /10 -->
+      <div class="bar-item">
+        <div class="bar-meta">
+          <span class="bar-lbl tip">Price vs Niche <span class="tip-q">i</span>
+            <span class="tip-box">
+              <div class="tt-title">Price vs Niche · 8/10</div>
+              Your paperback price of $18.99 is competitive for a business how-to book in this niche. A price within 20% of the niche average maximizes conversion.
+              <div class="tt-scale">
+                <div class="tt-row"><span>10/10</span><span>Within 20% of niche average</span></div>
+                <div class="tt-row"><span>5/10</span><span>20–50% above or below average</span></div>
+                <div class="tt-row"><span>0/10</span><span>50%+ outlier — hurts conversion</span></div>
+              </div>
+            </span>
+          </span>
+          <span class="bar-val">8 / 10</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" style="width:80%;background:var(--teal);"></div></div>
+      </div>
+
     </div>
     </div>
     <div style="background:var(--navy);padding:28px 32px 32px;flex:1;border-top:1px solid rgba(255,255,255,.06);">
